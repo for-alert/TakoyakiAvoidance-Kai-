@@ -1,12 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using SeneController;
+﻿using SeneController;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameStart : MonoBehaviour
 {
-    SceneController sc;
+    private SceneController sc;
 
     private void Start()
     {
@@ -14,7 +11,7 @@ public class GameStart : MonoBehaviour
     }
 
 // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKey(KeyCode.Return))
         {

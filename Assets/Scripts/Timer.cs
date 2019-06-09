@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using SeneController;
+﻿using SeneController;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
@@ -11,17 +8,15 @@ public class Timer : MonoBehaviour
 
     private Text timerText;
 
-    SceneController sc;
+    private SceneController sc;
 
-    // Use this for initialization
-    void Start()
+    private void Start()
     {
         timerText = GetComponent<Text>();
         sc = new SceneController();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         second -= Time.deltaTime;
         timerText.text = "残り" + ((int) second).ToString("00") + "秒";

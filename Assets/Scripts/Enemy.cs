@@ -1,18 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float SPEED = 0.05f;
+    private const float SPEED = 0.05f;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Vector2 Position = transform.position;
-        Position.y -= SPEED;
-        transform.position = Position;
-        if (Position.y < -6)
+        Vector2 position = transform.position;
+        position.y -= SPEED;
+        transform.position = position;
+        if (position.y < -6)
         {
             Destroy(gameObject);
         }
